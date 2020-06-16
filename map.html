@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--adaugare librarie externa leaflet-->
+    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <title>Map</title>
+</head>
+<body>
+<!--adaugarea textului-->
+    <h1>Bucureștiul în culori</h1>
+    <div id="historic_map">
+        <p>Bucureștiul, asemenea multor orașe din România,
+            <br> este văzut ca un oraș predominant gri și mohorât.
+            <br> De aceea, am hotărât să-l colorăm noi în viile culori
+            <br> ale curcubeului.
+        </p>
+        <u  onclick="Historic()">Vizualizare istoric harta</u>
+    </div>
+
+<!--adaugarea istoric harta-->
+    <script>
+        function Historic() {
+            document.getElementById("historic_map").innerHTML = "<p style='color: red'>"+"" +
+                "Sectorul 1 - are o suprafata de 67,5 km²"+"</p>" +
+                "<p style='color: orange'>"+"Sectorul 2 - are o suprafata de 32 km²"+"</p>"+"" +
+                "<p style='color:#e0e013'>"+"Sectorul 3 - are o suprafata de 32 km²"+"</p>"+"" +
+                "<p style='color:green'>"+"Sectorul 4 - are o suprafata de 34 km²"+"</p>"+"" +
+                "<p style='color: blue'>"+"Sectorul 5 - are o suprafata de 30 km²"+"</p>"+"" +
+                "<p style='color: purple'>"+"Sectorul 6 - are o suprafata de 38 km²"+"</p>"
+        }
+    </script>
+
+<!--adaugare profil virtual -->
+    <div id="card">
+        <img id="img" src="img.jpg" alt="img">
+        <h1>Lobodan Alexandru-Bogdan</h1>
+        <div id="description">
+            <p>Varsta: 28 de ani</p>
+            <p>email: alexandrulobodan@gmail.com</p>
+            <p>Telefon: 0731248456</p>
+            <u class="button" onclick="Description()">Despre mine</u>
+        </div>
+    </div>
+
+<!--adaugare descriere-->
+    <script>
+        function Description() {
+            document.getElementById("description").innerHTML = "Am decis să fac această schimbare profesională"+" <br /> "+"" +
+                "deoarece IT-ul este o pasiune pentru mine.Consider"+" <br /> "+"" +
+                "ca este un domeniu în continua dezvoltare iar acest"+" <br /> "+"" +
+                "lucru îmi permite să progresez."+" <br /> "+"" +
+                "Vreau să contribui la realizarea obiectivelor echipei"+" <br /> "+"" +
+                "din care voi face parte, deoarece asta mă va ajuta să"+" <br /> "+"" +
+                "fac față noilor provocări. "
+        }
+    </script>
+
+<!--adaugare harta interactiva-->
+    <div id="map"></div>
+    <script src="map.js"></script>
+</body>
+</html>
